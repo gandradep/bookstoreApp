@@ -1,12 +1,14 @@
-/* eslint-disable */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Book from './Book';
+import FormBook from './Form';
 
 class BookList extends React.PureComponent {
   render() {
     return (
-      <div className="dFlex">
-        <h1 className="fsizeBig fw400"> BookList </h1>
+      <div>
+        <Book title="title1" author="author1" />
+        <Book title="title2" author="author2" />
+        <FormBook />
       </div>
     );
   }

@@ -54,6 +54,4 @@ body {
 
 .content {
   min-height: 90vh;
-  flex-direction: column;
-  justify-content: center;
 }
