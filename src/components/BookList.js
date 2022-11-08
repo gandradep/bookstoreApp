@@ -1,9 +1,10 @@
+/* eslint-disable */
 import React from 'react';
 import Book from './Book';
 import FormBook from './Form';
 
-class BookList extends React.PureComponent {
-  render() {
+const BookList = () => {
+
     return (
       <div>
         <Book title="title1" author="author1" />
@@ -11,6 +12,6 @@ class BookList extends React.PureComponent {
         <FormBook />
       </div>
     );
-  }
+
 }
 export default BookList;

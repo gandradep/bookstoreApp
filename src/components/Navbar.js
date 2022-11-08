@@ -2,8 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Navbar extends React.PureComponent {
-  render() {
+const Navbar = () => {
+
     return (
       <nav className="dFlex nav">
         <h1 className="fsizeBig fw400"> Bookstore CMS </h1>
@@ -15,9 +15,9 @@ class Navbar extends React.PureComponent {
             <Link to="/categories">CATEGORIES</Link>
           </li>
         </ul>
-        
+
       </nav>
     );
-  }
+
 }
 export default Navbar;

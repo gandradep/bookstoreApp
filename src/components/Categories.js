@@ -1,12 +1,13 @@
+/* eslint-disable */
 import React from 'react';
 
-class Categories extends React.PureComponent {
-  render() {
+const Categories = () => {
+
     return (
       <div className="dFlex">
         <button type="button"> Check Status </button>
       </div>
     );
-  }
+
 }
 export default Categories;
