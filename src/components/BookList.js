@@ -7,12 +7,13 @@ import { useSelector } from "react-redux";
 const BookList = () => {
   const books = useSelector((state) => state.book);
   console.log(books);
-  return (
+    return (
     <div>
       {books?.map((book) => (
         <Book
           title={book.title}
           author={book.author}
+          id={book.id}
           key={book.id}/>
       ))}
       <FormBook />
