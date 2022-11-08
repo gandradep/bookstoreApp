@@ -9,13 +9,13 @@ const bookReducer = (state = initialState, action) => {
   switch (action.type){
     case BOOK_ADDED:
     return [
-      ...state,
-      {
-        id: action.id,
-        title: action.title,
-        author: action.author,
-      }
-    ];
+        ...state,
+        {
+          id: action.id,
+          title: action.title,
+          author: action.author,
+        },
+      ];
     case BOOK_REMOVED:
     return [
       ...state.filter((item)=>item.id!==action.id),

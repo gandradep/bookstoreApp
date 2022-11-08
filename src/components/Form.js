@@ -17,7 +17,6 @@ const FormBook = () =>  {
       setCounter(counter + 1);
       setTitle("");
       setAuthor("");
-      console.log(books);
     }
   }
     return (
