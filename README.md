@@ -1,5 +1,5 @@
 # Bookstore App
-> Setting up with react the bookstore app.
+> Setting up with react the bookstore app. Setting up redux with duck pattern.
 
 ## Built With
 
