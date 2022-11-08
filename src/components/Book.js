@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
@@ -10,8 +9,7 @@ const Book = (props) => {
 
   const removeBookHandler = (e) => {
     dispatch(removeBook(Number(e.target.id)));
-    console.log(Number(e.target.id));
-  }
+  };
   return (
     <div>
       <p>{title}</p>
@@ -19,8 +17,9 @@ const Book = (props) => {
       <button
         id={id}
         type="button"
-        onClick= {removeBookHandler}
-      >Remove book
+        onClick={removeBookHandler}
+      >
+        Remove book
       </button>
     </div>
   );
@@ -28,5 +27,6 @@ const Book = (props) => {
 Book.propTypes = {
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 export default Book;

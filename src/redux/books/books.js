@@ -1,14 +1,12 @@
-/* eslint-disable */
 const BOOK_ADDED = 'bookstore/books/BOOK_ADDED';
 const BOOK_REMOVED = 'bookstore/books/BOOK_REMOVED';
 
 const initialState = [];
 
-//reducer
 const bookReducer = (state = initialState, action) => {
-  switch (action.type){
+  switch (action.type) {
     case BOOK_ADDED:
-    return [
+      return [
         ...state,
         {
           id: action.id,
@@ -17,13 +15,13 @@ const bookReducer = (state = initialState, action) => {
         },
       ];
     case BOOK_REMOVED:
-    return [
-      ...state.filter((item)=>item.id!==action.id),
-    ]
+      return [
+        ...state.filter((item) => item.id !== action.id),
+      ];
     default:
-    return state;
+      return state;
   }
-}
+};
 
 export const addBook = (title, author, id) => ({
   type: BOOK_ADDED,

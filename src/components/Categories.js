@@ -1,13 +1,9 @@
-/* eslint-disable */
 import React from 'react';
 
-const Categories = () => {
+const Categories = () => (
+  <div className="dFlex">
+    <button type="button"> Check Status </button>
+  </div>
+);
 
-    return (
-      <div className="dFlex">
-        <button type="button"> Check Status </button>
-      </div>
-    );
-
-}
 export default Categories;

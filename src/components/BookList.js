@@ -1,24 +1,22 @@
-/* eslint-disable */
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import FormBook from './Form';
-import { useSelector } from "react-redux";
 
 const BookList = () => {
   const books = useSelector((state) => state.book);
-  console.log(books);
-    return (
+  return (
     <div>
       {books?.map((book) => (
         <Book
           title={book.title}
           author={book.author}
           id={book.id}
-          key={book.id}/>
+          key={book.id}
+        />
       ))}
       <FormBook />
     </div>
-    );
-
-  }
-  export default BookList;
+  );
+};
+export default BookList;

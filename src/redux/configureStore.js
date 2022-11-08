@@ -1,11 +1,14 @@
-/* eslint-disable */
-import { combineReducers, createStore } from 'redux';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import bookReducer from './books/books';
+import categoriesReducer from './categories/categories';
 
-const reducer = combineReducers({
-  book: bookReducer
+const rootReducer = combineReducers({
+  book: bookReducer,
+  categories: categoriesReducer,
 });
 
-const store = createStore(reducer);
+const store = configureStore({
+  reducer: rootReducer,
+});
 
 export default store;
