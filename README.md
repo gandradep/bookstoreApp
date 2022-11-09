@@ -1,5 +1,5 @@
 # Bookstore App
-> Setting up with react the bookstore app. Setting up redux with duck pattern.
+> Setting up with react with redux for the bookstore app.
 
 ## Built With
 
@@ -23,7 +23,7 @@
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
+- [@TechnicalShree](https://github.com/TechnicalShree) for his React-Redux example.
 
 ## 📝 License
 
