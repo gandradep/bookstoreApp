@@ -18,11 +18,10 @@ export const getBooks = createAsyncThunk(
 );
 
 export const addNewBook = createAsyncThunk(
-  'books/addNewBooks',
+  'books/addNewBook',
   async (obj1, thunkApi) => {
     const { id, title, author } = obj1;
-    return await fetch(baseUrl,
-      {
+    return await fetch(baseUrl, {
         method: 'POST',
         body: JSON.stringify({
           item_id: id,
@@ -36,16 +35,28 @@ export const addNewBook = createAsyncThunk(
       })
     .then((res) =>{
       if(res.ok){
-        console.log('it worked');
-        console.log(title);
         thunkApi.dispatch(addBook(title, author, id));
       }
     });
   }
 );
-
-const initialState = [
-];
+export const deleteBook = createAsyncThunk(
+  'books/deleteBook',
+  async (id, thunkApi) => {
+    console.log(id);
+    return await fetch(`${baseUrl}/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+    .then((res) =>{
+      if(res.ok){
+        thunkApi.dispatch(removeBook(id));
+      }
+    });
+  }
+);
 
 const bookReducer = (state = [], action) => {
   switch (action.type) {

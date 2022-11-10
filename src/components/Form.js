@@ -1,6 +1,5 @@
-/* eslint-disable */
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addNewBook } from '../redux/books/books';
 
@@ -8,8 +7,6 @@ const FormBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.book);
-
 
   const addBookHandler = () => {
     if (title !== '' && author !== '') {
@@ -18,7 +15,7 @@ const FormBook = () => {
         title,
         author,
       };
-      dispatch(addNewBook(newBook));      
+      dispatch(addNewBook(newBook));
       setTitle('');
       setAuthor('');
     }
