@@ -1,18 +1,24 @@
+/* eslint-disable */
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { useDispatch, useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addNewBook } from '../redux/books/books';
 
 const FormBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
-  const counterInitialState = 0;
-  const [counter, setCounter] = useState(counterInitialState.toString());
+  const books = useSelector((state) => state.book);
+
 
   const addBookHandler = () => {
     if (title !== '' && author !== '') {
-      dispatch(addBook(title, author, counter));
-      setCounter(counter + 1);
+      const newBook = {
+        id: uuidv4(),
+        title,
+        author,
+      };
+      dispatch(addNewBook(newBook));      
       setTitle('');
       setAuthor('');
     }

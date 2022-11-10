@@ -12,8 +12,7 @@ const BookList = () => {
 
   useEffect(() => {
     dispatch(getBooks())
-  }, []);
-  console.log(books);
+  }, []);  
   return (
     <div>
       {books?.map((book) => (

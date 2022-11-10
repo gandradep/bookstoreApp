@@ -17,12 +17,37 @@ export const getBooks = createAsyncThunk(
   }
 );
 
-
+export const addNewBook = createAsyncThunk(
+  'books/addNewBooks',
+  async (obj1, thunkApi) => {
+    const { id, title, author } = obj1;
+    return await fetch(baseUrl,
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          item_id: id,
+          title,
+          author,
+          category: 'MANGA',
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+    .then((res) =>{
+      if(res.ok){
+        console.log('it worked');
+        console.log(title);
+        thunkApi.dispatch(addBook(title, author, id));
+      }
+    });
+  }
+);
 
 const initialState = [
 ];
 
-const bookReducer = (state = initialState, action) => {
+const bookReducer = (state = [], action) => {
   switch (action.type) {
     case BOOK_FETCHED:
     const bookList = [];
@@ -61,7 +86,7 @@ const fetchBook = (data) => ({
   data,
 });
 
-export const addBook = (title, author, id) => ({
+const addBook = (title, author, id) => ({
   type: BOOK_ADDED,
   title,
   author,
