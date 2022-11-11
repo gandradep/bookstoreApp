@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
-  <nav className="dFlex nav">
-    <div className="dFlex subNav  montse">
+  <nav className="dFlex nav alignCenter">
+    <div className="dFlex subNav  montse alignCenter">
       <h1 className="fsizeBig bold"> Bookstore CMS </h1>
       <ul className="dFlex menu fs175">
         <li>

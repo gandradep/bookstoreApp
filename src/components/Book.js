@@ -13,8 +13,8 @@ const Book = (props) => {
     dispatch(deleteBook(e.target.id));
   };
   return (
-    <div className="bookContainer dFlex">
-      <div className="dFlex bookInfo">
+    <div className="bookContainer dFlex alignCenter">
+      <div className="dFlex bookInfo flexCol">
         <div>
           <p className="roboto bold fs1375">{title}</p>
           <p className="blueFont fs875 roboto fw300">{author}</p>
@@ -36,18 +36,22 @@ const Book = (props) => {
           <li><button className="blueFont" type="button">Edit</button></li>
         </ul>
       </div>
-      <div className="readPercent">
-        <div>
-          <span>
+      <div className="readPercent dFlex alignCenter">
+        <div className="percWheel" />
+        <div className="dFlex flexCol">
+          <span className="fs2 montse">
             {percent}
             %
           </span>
+          <span className="fs1 montse opacity50">Completed</span>
         </div>
       </div>
-      <div className="currentChapter">
+      <div className="currentChapter dFlex flexCol">
         <div>
-          <span>{chapter}</span>
+          <h5 className="roboto fw300 fs1 opacity50">CURRENT CHAPTER</h5>
+          <span className="roboto fs1 fw300">{chapter}</span>
         </div>
+        <button className="roboto fs1 fw300 upProgButt" type="button">UPDATE PROGRESS</button>
       </div>
     </div>
   );

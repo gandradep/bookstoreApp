@@ -13,8 +13,8 @@ const BookList = () => {
   }, []);
 
   return (
-    <div className="content2 dFlex">
-      <div className="bookList dFlex">
+    <div className="content2 dFlex flexCol">
+      <div className="bookList dFlex flexCol">
         {books?.map((book) => (
           <Book
             title={book.title}
