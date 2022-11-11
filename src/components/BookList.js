@@ -11,16 +11,21 @@ const BookList = () => {
   useEffect(() => {
     dispatch(getBooks());
   }, []);
+
   return (
-    <div>
-      {books?.map((book) => (
-        <Book
-          title={book.title}
-          author={book.author}
-          id={book.id}
-          key={book.id}
-        />
-      ))}
+    <div className="content2 dFlex">
+      <div className="bookList dFlex">
+        {books?.map((book) => (
+          <Book
+            title={book.title}
+            author={book.author}
+            percent={book.percent}
+            chapter={book.chapter}
+            id={book.id}
+            key={book.id}
+          />
+        ))}
+      </div>
       <FormBook />
     </div>
   );

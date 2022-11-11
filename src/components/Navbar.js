@@ -14,7 +14,7 @@ const Navbar = () => (
         </li>
       </ul>
     </div>
-    <button type="button" className>
+    <button type="button" className="userButton">
       <i className="fa-solid fa-user userIcon" />
     </button>
 

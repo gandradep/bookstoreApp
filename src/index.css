@@ -10,8 +10,24 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.blueFont{
+  color: #4386bf;
+}
+
+.lightGray {
+  color: #e8e8e8;
+}
+
 .roboto {
   font-family: 'Roboto Slab', serif;
+}
+
+.fs875 {
+  font-size: 0.875rem;
+}
+
+.fs1375 {
+  font-size: 1.375rem;
 }
 
 html,
@@ -21,7 +37,7 @@ body {
 
 #root {
   min-height: 100vh;
-  background-color: #ddd;
+  background-color: #f5f6fa;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -45,15 +61,17 @@ body {
   font-weight: 400;
 }
 
+.fw300 {
+  font-weight: 300;
+}
+
 .bold {
   font-weight: 700;
 }
+
 a,
 a:visited {
   text-decoration: none;
-  color: #444;
-}
-a:active {
   color: black;
 }
 
@@ -68,6 +86,7 @@ a:active {
   align-items: center;
   padding: 1.5rem 3rem;
   background-color: white;
+  border-bottom: solid 1px #e8e8e8;
 }
 
 .subNav {
@@ -75,12 +94,48 @@ a:active {
   column-gap: 2.5rem;
 }
 
+.userButton{
+  background-color: white;
+  padding: 1rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+}
+
 .userIcon {
   font-size: 1.2rem;
   color: #0290ff;
-
 }
 
 .content {
+  background-color: #fafafa;
+}
 
+.content2 {
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 2rem 3rem;
+}
+
+.bookList{
+  flex-direction: column;
+  row-gap: 0.9rem;
+ }
+
+.bookContainer {
+  background-color: white;
+}
+
+.buttonList {
+  list-style: none;
+  column-gap: 10px;
+}
+
+.buttonList button{
+  background-color: white;
+  border: none;
+}
+
+.bookInfo {
+  flex-direction: column;
+  row-gap: 1rem;
 }
