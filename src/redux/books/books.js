@@ -71,13 +71,18 @@ export const deleteBook = createAsyncThunk(
 
 const bookReducer = (state = [], action) => {
   const bookList = [];
+  const percentArr = [1, 40, 56, 70, 90];
+  const chapter = ['Introduction', 'Chapter 5', 'Chapter 6', 'Chapter 9', 'Chapter 12'];
   switch (action.type) {
     case BOOK_FETCHED:
       action.data.forEach((item) => {
+        const indexChapter = Math.floor(Math.random() * percentArr.length);
         const newbook = {
           id: item[0],
           title: item[1][0].title,
           author: item[1][0].author,
+          percent: percentArr[indexChapter],
+          chapter: chapter[indexChapter],
         };
         bookList.push(newbook);
       });

@@ -1,11 +1,9 @@
-/* eslint-disable */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import BookList from './components/BookList';
 import Categories from './components/Categories';
-
 
 function App() {
   return (

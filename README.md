@@ -26,6 +26,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 - [@TechnicalShree](https://github.com/TechnicalShree) for his React-Redux example.
 - [Bookstore Api](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739)
+- Microverse for the style template.
 
 ## 📝 License
 

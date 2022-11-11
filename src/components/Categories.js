@@ -10,11 +10,12 @@ const Categories = () => {
     dispatch(checkStatus());
   };
   return (
-    <div className="dFlex">
-      <p>{message}</p>
+    <div className="dFlex flexCol">
+      <p className="montse bold fs1375">{message}</p>
       <button
         type="button"
         onClick={buttonHandler}
+        className="roboto bold fs1 formButt"
       >
         Check Status
       </button>
