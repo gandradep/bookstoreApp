@@ -18,6 +18,10 @@
   color: #e8e8e8;
 }
 
+.gray {
+  color: #888;
+}
+
 .opacity50 {
   opacity: 0.5;
 }
@@ -50,7 +54,7 @@ body {
 #root {
   min-height: 100vh;
   background-color: #f5f6fa;
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 5rem;
 }
 
@@ -130,7 +134,7 @@ a:visited {
 
 .content2 {
   row-gap: 2rem;
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 4rem 3rem;
 }
 
 .bookList{
@@ -177,4 +181,35 @@ a:visited {
   border-radius: 3px;
   color: white;
   padding: 8px 24px;
+}
+
+.formComponent {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+.formContainer{
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.input {
+  padding:12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  width: 45%;
+}
+
+.author {
+  width: 30%;
+}
+
+.formButt {
+  background-color: #0290ff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  width: 20%;
 }

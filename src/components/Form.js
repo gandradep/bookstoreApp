@@ -21,14 +21,16 @@ const FormBook = () => {
     }
   };
   return (
-    <div>
-      <form>
+    <div className="formComponent">
+      <h2 className="montse bold fs1375 gray">ADD NEW BOOK</h2>
+      <form className="dFlex formContainer">
         <input
           type="text"
           name="title"
           value={title}
           placeholder="Book Title"
           onChange={(e) => setTitle(e.target.value)}
+          className="input"
         />
         <input
           type="text"
@@ -36,8 +38,15 @@ const FormBook = () => {
           value={author}
           placeholder="Book Author"
           onChange={(e) => setAuthor(e.target.value)}
+          className="input author"
         />
-        <button type="button" onClick={addBookHandler}>Add book</button>
+        <button
+          type="button"
+          onClick={addBookHandler}
+          className="roboto bold fs1 formButt"
+        >
+          ADD BOOK
+        </button>
       </form>
     </div>
   );
