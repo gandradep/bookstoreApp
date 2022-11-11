@@ -3,15 +3,20 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => (
   <nav className="dFlex nav">
-    <h1 className="fsizeBig fw400"> Bookstore CMS </h1>
-    <ul className="dFlex menu fs175">
-      <li>
-        <Link to="/">BOOKS</Link>
-      </li>
-      <li>
-        <Link to="/categories">CATEGORIES</Link>
-      </li>
-    </ul>
+    <div className="dFlex subNav  montse">
+      <h1 className="fsizeBig bold"> Bookstore CMS </h1>
+      <ul className="dFlex menu fs175">
+        <li>
+          <Link to="/">BOOKS</Link>
+        </li>
+        <li>
+          <Link to="/categories">CATEGORIES</Link>
+        </li>
+      </ul>
+    </div>
+    <button type="button" className>
+      <i className="fa-solid fa-user userIcon" />
+    </button>
 
   </nav>
 );
